@@ -147,7 +147,7 @@ def MergeSubNew(filePath: str, subPath: str, user_id, file_list):
         muxcmd.append("-map")
         muxcmd.append(f"{j}:s")
         muxcmd.append(f"-metadata:s:s:{subTrack}")
-        muxcmd.append(f"title=Track {subTrack+1} - English (AtoZCartoonist)")
+        muxcmd.append(f"title=Track {subTrack+1} AtoZCartoonist (eng)")
         subTrack += 1
     muxcmd.append("-c:v")
     muxcmd.append("copy")
@@ -187,7 +187,7 @@ def MergeAudio(videoPath: str, files_list: list, user_id):
         muxcmd.append("-map")
         muxcmd.append(f"{j}:a")
         muxcmd.append(f"-metadata:s:a:{audioTracks}")
-        muxcmd.append(f"title=Track {audioTracks+1} - English (AtoZCartoonist)")
+        muxcmd.append(f"title=Track {audioTracks+1} AtoZCartoonist (eng)")
         audioTracks += 1
     muxcmd.append(f"-disposition:s:a:{fAudio}")
     muxcmd.append("default")
