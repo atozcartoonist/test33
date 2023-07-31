@@ -95,7 +95,7 @@ async def MergeSub(filePath: str, subPath: str, user_id):
             subTrack += 1
     muxcmd.append(f"-metadata:s:s:{subTrack}")
     subTrack += 1
-    subTitle = f"Track {subTrack} : AtoZCartoonist (eng)"
+    subTitle = f"Track {subTrack} : AtoZCartoonist"
     muxcmd.append(f"title={subTitle}")
     muxcmd.append("-c:v")
     muxcmd.append("copy")
@@ -147,7 +147,7 @@ def MergeSubNew(filePath: str, subPath: str, user_id, file_list):
         muxcmd.append("-map")
         muxcmd.append(f"{j}:s")
         muxcmd.append(f"-metadata:s:s:{subTrack}")
-        muxcmd.append(f"title=Track {subTrack+1} : AtoZCartoonist (eng)")
+        muxcmd.append(f"title=Track {subTrack+1} : AtoZCartoonist")
         subTrack += 1
     muxcmd.append("-c:v")
     muxcmd.append("copy")
